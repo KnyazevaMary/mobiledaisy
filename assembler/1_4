@@ -1,0 +1,17 @@
+		JMP start
+Date:   
+	DB "27/12"
+	DB 0	
+
+start:
+	MOV C, Date 
+	MOV D, 240	
+	
+Jump:
+	MOV A, [C]	
+	MOV [D], A	
+	INC C
+	INC D  
+	CMP B, [C]	
+	JNZ Jump
+	HLT

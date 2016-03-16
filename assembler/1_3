@@ -1,0 +1,6 @@
+JMP start 
+	DB 27
+	DB 12	
+start:
+	MOV A, [2]
+	ADD A, [3]

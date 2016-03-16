@@ -1,0 +1,4 @@
+MOV a, 27
+MOV b, 12
+push a
+push b
