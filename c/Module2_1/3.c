@@ -1,5 +1,7 @@
-	#include <stdio.h>
-int main(){
+#include <stdio.h>
+
+void main()
+{
 	int day=27, month=12, A;
 	A=day;
 	day=month;

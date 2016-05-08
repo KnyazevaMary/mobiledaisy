@@ -1,10 +1,11 @@
 #include <stdio.h>
 #include <string.h>
+
 void main ()
 {
     char str[255];
     printf("Enter the string\n");
-    gets(str);
+    fgets(str, sizeof(str), stdin);
     for (int i=0; i<=(strlen(str)-1); i++)
     {
         if (str[i]<123&&str[i]>96)

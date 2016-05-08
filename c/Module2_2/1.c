@@ -1,6 +1,8 @@
 #include <stdio.h>
-int main(){
-int dayn;
+
+void main()
+{
+	int dayn;
 	printf("Введите количество дней\n");
 	scanf("%d", &dayn);
 	int year=dayn/365;
