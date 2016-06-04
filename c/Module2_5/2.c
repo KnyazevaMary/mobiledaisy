@@ -1,0 +1,51 @@
+#include <stdio.h>
+#include <string.h>
+
+void string_copy(char in[255], char out[255])
+{
+	int len;
+	len = strlen(in);
+	for (int i = 0; i < len - 1; i++)
+	{
+		out[i] = in[i];
+	}
+	out[len - 1] = '\0';
+}
+
+void string_copy_inverse(char in[255], char out[255])
+{
+	int len;
+	len = strlen(in);
+	for (int i = 0; i < len - 1; i++)
+	{
+		//out[i] = in[i];
+		out[len - i - 2]= in[i];
+	}
+	out[len - 1] = '\0';
+}
+
+void main()
+{
+	int k = 0;
+	char source[255], copy[255], answer[15];
+	printf("Введите строку\n");
+	fgets(source, sizeof(source), stdin);
+	printf("Хотите инвертировать строку?\nN (n) - Нет ; Y (y) - Да\n");
+	while (1)
+	{
+		fgets(answer, sizeof(answer), stdin);
+		if ((answer[0] == 89) || (answer[0] == 121))
+		{
+			string_copy_inverse(source, copy);
+			break;
+		}
+		else
+			if ((answer[0] == 78) || (answer[0] == 110))
+			{
+				string_copy(source, copy);
+				break;
+			}
+		printf("N - No ; Y - Yes\n");
+	}
+	printf("%s\n", copy);
+}

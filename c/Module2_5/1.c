@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <string.h>
+
+void string_copy(char in[255], char out[255])
+{
+	int len;
+	len = strlen(in);
+	for (int i = 0; i < len - 1; i++)
+	{
+		out[i] = in[i];
+	}
+	out[len - 1] = '\0';
+}
+
+void main()
+{
+	char source[255], copy[255];
+	printf("Введите строку\n");
+	fgets(source, sizeof(source), stdin);
+	string_copy(source, copy);
+	printf("%s\n", copy);
+}
